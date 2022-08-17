@@ -1,0 +1,279 @@
+@import "./base";
+@import "./responsive";
+@import "./colors";
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: $FF-Family;
+    background: $Light-Grayish-Cyan;
+    @include flexCenter;
+}
+
+.container{
+    background: $Light-Grayish-Cyan;
+    min-height: 100vh;
+    max-width: 1200px;
+    @include flexColCenter;
+    padding: 0 10px;
+    @include mq(450px){
+      padding: 0px;
+    }
+}
+
+// header
+.header{
+    margin: 10px 0px 20px;
+    h1{
+        font-size: 1.6rem;
+        letter-spacing: 5px;
+        font-weight: 600;
+    }
+}
+// end of header
+
+// main
+main{
+    min-height: calc(100vh - 60vh);
+    max-width: 100%;
+    @include flexCenter;
+    align-items: unset;
+    justify-content: space-evenly;
+    gap: 10px;
+    background: $White;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    margin: 10px 5px 0px ;
+    @include mq(450px){
+        margin: 10px 10px 0px;
+        padding: 0 15px;
+    }
+    @include mq(350px){
+        padding: 30px 0px;
+    }
+    @media screen and(orientation:landscape) {
+        height: auto;
+    }
+    
+    // section-left
+    .sec__form{
+        background: $White;
+        padding:  5px;
+        margin: 20px;
+        @include mq(830px){
+            flex: 1;
+        }
+        @include mq(450px){
+           margin: 0;
+        }
+
+        .tip__calculator{
+            form {
+               label{
+                font-size: 1.2rem;
+                color: $Dark-Grayish-Cyan;
+                margin-left: 10px;
+               }
+
+               .screen{
+                background: $Very-Light-Grayish-Cyan;
+                border-radius: 4px;
+                @include flexCenter;
+                justify-content: space-between;
+                padding: 5px 10px;
+                margin-top: 5px;
+                &.active{
+                    border: 2px solid red;
+                }
+
+                span,
+                input{
+                    background: transparent;
+                }
+                span{
+                    color: $Grayish-Cyan;
+                    font-size: 1.5rem;
+                }
+
+                input{
+                    border: none;
+                    outline: none;
+                    margin-left: auto ;
+                    text-align: right;
+                    font-size: 1.5rem;
+                    color: $Very-Dark-Cyan;
+                    &::placeholder{
+                        color: $Grayish-Cyan;
+                        font-size: 1.5rem;
+                        text-align: right;
+                        padding-right: 10px;
+                    }
+                }
+               }
+
+
+               .select__tip{
+                margin: 20px 10px;
+
+                h2{
+                    font-size: 1.2rem;
+                    color: $Dark-Grayish-Cyan;
+                    margin-bottom: 10px;
+                }
+                .btn__container{
+                    display: grid;
+                    grid-template-columns: repeat(3, 150px);
+                    gap: 10px;
+                    @include mq(768px){
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    @include mq(550px){
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+
+                    .btn{
+                        text-align: center;
+                        background: $Very-Dark-Cyan;
+                        color: $Very-Light-Grayish-Cyan;
+                        outline: none;
+                        padding: 10px 0;
+                        border: none;
+                        border-radius: 7px;
+                        font-size: 1.3rem;
+                        font-weight: 900;
+                        font-family: inherit;
+                        cursor: pointer;
+                        &.active{
+                            background: $Strong-Cyan;
+                        }
+                        transition: background .2s ease-in-out;
+                        &:hover,
+                        &:focus{
+                            background: $Strong-Cyan;
+                        }
+                    }
+                    .btn__custom{
+                        background: $Very-Light-Grayish-Cyan;
+                        color: $Dark-Grayish-Cyan;
+                        font-family: inherit;
+                        &.active{
+                            background: $Very-Light-Grayish-Cyan;
+                            border:  2px solid red;
+                        }
+                        &:hover,
+                        &:focus{
+                            background: $Very-Light-Grayish-Cyan;
+                            outline: 2px solid $Strong-Cyan;
+                        }
+                    }
+                 }
+               }
+
+               .no__of__people{
+
+                   label{
+                       font-size: 1.2rem;
+                       display: flex;
+                       justify-content: space-between;
+                        margin-left: 10px;
+                       .error-message{
+                        font-size: 1.1rem;
+                        color: red;
+                       }
+                    }
+                    
+                    .no__of__people__container{
+                    background: $Very-Light-Grayish-Cyan;
+                    @include flexCenter;
+                    justify-content: space-between;
+                    padding: 5px 10px;
+                    &.active{
+                        border: 2px solid red;
+                    }
+                  
+
+                    span{
+                        background: transparent;
+                        img{
+                            width: 15px;
+                        }
+                    }
+                    .no-of-people{
+                        background: transparent;
+                        text-align: right;
+                        outline: none;
+                        border: none;
+                        color: $Very-Dark-Cyan;
+                        &::placeholder{
+                            text-align: right;
+                            color: $Grayish-Cyan;
+                        }
+                    }
+                }
+               }
+            }
+        }
+    }
+    // end of section-left
+    // section calculation
+    .sec__calculation{
+        background: $Very-Dark-Cyan; 
+        color: $Very-Light-Grayish-Cyan;
+        @include mq(830px){
+            flex: 1;
+        }
+       
+        margin: 20px;
+        border-radius: 20px;
+        padding: 20px 25px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        max-width: 100%;
+
+        .display__screen{
+            flex: 1;
+            .tip__amount__container,
+            .tip__total__container{
+                @include flexCenter;
+                justify-content: space-between;
+                margin: 20px 0px;
+
+                .tip__amount,
+                .tip__total{
+                    font-size: 1.2rem;
+                    .person{
+                        display: block;
+                        font-size: 1rem;
+                        color: $Grayish-Cyan;
+                    }
+                }
+                .tip__amount__screen,
+                .tip__total__screen{
+                    font-size: 2rem;
+                    font-weight: 800;
+                    color: $Strong-Cyan;
+                }
+            }
+        }
+        .btn__reset{
+            padding: 6px 10px;
+            width: 100%;
+            background: $Strong-Cyan;
+            color: $Very-Dark-Cyan;
+            font-weight: 700;
+            font-size: 1.2rem;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            &:hover{
+                background: $Light-Grayish-Cyan;
+            }
+        }
+    }
+    // end of section calculation
+}
+// end of main

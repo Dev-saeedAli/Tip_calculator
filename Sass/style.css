@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.offset {
+  position: absolute;
+  left: -10000px;
+}
+
+input, label {
+  font-size: 1.5rem;
+  font-family: inherit;
+}
+
+.none {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background: #c5e4e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  background: #c5e4e7;
+  min-height: 100vh;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    padding: 0px;
+  }
+}
+
+.header {
+  margin: 10px 0px 20px;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  letter-spacing: 5px;
+  font-weight: 600;
+}
+
+main {
+  min-height: calc(100vh - 60vh);
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 10px;
+  background: white;
+  border-radius: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px 5px 0px;
+}
+
+@media screen and (max-width: 450px) {
+  main {
+    margin: 10px 10px 0px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  main {
+    padding: 30px 0px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  main {
+    height: auto;
+  }
+}
+
+main .sec__form {
+  background: white;
+  padding: 5px;
+  margin: 20px;
+}
+
+@media screen and (max-width: 830px) {
+  main .sec__form {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  main .sec__form {
+    margin: 0;
+  }
+}
+
+main .sec__form .tip__calculator form label {
+  font-size: 1.2rem;
+  color: #5e7a7d;
+  margin-left: 10px;
+}
+
+main .sec__form .tip__calculator form .screen {
+  background: #f4fafa;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+
+main .sec__form .tip__calculator form .screen.active {
+  border: 2px solid red;
+}
+
+main .sec__form .tip__calculator form .screen span,
+main .sec__form .tip__calculator form .screen input {
+  background: transparent;
+}
+
+main .sec__form .tip__calculator form .screen span {
+  color: #7f9c9f;
+  font-size: 1.5rem;
+}
+
+main .sec__form .tip__calculator form .screen input {
+  border: none;
+  outline: none;
+  margin-left: auto;
+  text-align: right;
+  font-size: 1.5rem;
+  color: #00494d;
+}
+
+main .sec__form .tip__calculator form .screen input::-webkit-input-placeholder {
+  color: #7f9c9f;
+  font-size: 1.5rem;
+  text-align: right;
+  padding-right: 10px;
+}
+
+main .sec__form .tip__calculator form .screen input:-ms-input-placeholder {
+  color: #7f9c9f;
+  font-size: 1.5rem;
+  text-align: right;
+  padding-right: 10px;
+}
+
+main .sec__form .tip__calculator form .screen input::-ms-input-placeholder {
+  color: #7f9c9f;
+  font-size: 1.5rem;
+  text-align: right;
+  padding-right: 10px;
+}
+
+main .sec__form .tip__calculator form .screen input::placeholder {
+  color: #7f9c9f;
+  font-size: 1.5rem;
+  text-align: right;
+  padding-right: 10px;
+}
+
+main .sec__form .tip__calculator form .select__tip {
+  margin: 20px 10px;
+}
+
+main .sec__form .tip__calculator form .select__tip h2 {
+  font-size: 1.2rem;
+  color: #5e7a7d;
+  margin-bottom: 10px;
+}
+
+main .sec__form .tip__calculator form .select__tip .btn__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (150px)[3];
+      grid-template-columns: repeat(3, 150px);
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  main .sec__form .tip__calculator form .select__tip .btn__container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  main .sec__form .tip__calculator form .select__tip .btn__container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+main .sec__form .tip__calculator form .select__tip .btn__container .btn {
+  text-align: center;
+  background: #00494d;
+  color: #f4fafa;
+  outline: none;
+  padding: 10px 0;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+}
+
+main .sec__form .tip__calculator form .select__tip .btn__container .btn.active {
+  background: #26c0ab;
+}
+
+main .sec__form .tip__calculator form .select__tip .btn__container .btn:hover, main .sec__form .tip__calculator form .select__tip .btn__container .btn:focus {
+  background: #26c0ab;
+}
+
+main .sec__form .tip__calculator form .select__tip .btn__container .btn__custom {
+  background: #f4fafa;
+  color: #5e7a7d;
+  font-family: inherit;
+}
+
+main .sec__form .tip__calculator form .select__tip .btn__container .btn__custom.active {
+  background: #f4fafa;
+  border: 2px solid red;
+}
+
+main .sec__form .tip__calculator form .select__tip .btn__container .btn__custom:hover, main .sec__form .tip__calculator form .select__tip .btn__container .btn__custom:focus {
+  background: #f4fafa;
+  outline: 2px solid #26c0ab;
+}
+
+main .sec__form .tip__calculator form .no__of__people label {
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 10px;
+}
+
+main .sec__form .tip__calculator form .no__of__people label .error-message {
+  font-size: 1.1rem;
+  color: red;
+}
+
+main .sec__form .tip__calculator form .no__of__people .no__of__people__container {
+  background: #f4fafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 10px;
+}
+
+main .sec__form .tip__calculator form .no__of__people .no__of__people__container.active {
+  border: 2px solid red;
+}
+
+main .sec__form .tip__calculator form .no__of__people .no__of__people__container span {
+  background: transparent;
+}
+
+main .sec__form .tip__calculator form .no__of__people .no__of__people__container span img {
+  width: 15px;
+}
+
+main .sec__form .tip__calculator form .no__of__people .no__of__people__container .no-of-people {
+  background: transparent;
+  text-align: right;
+  outline: none;
+  border: none;
+  color: #00494d;
+}
+
+main .sec__form .tip__calculator form .no__of__people .no__of__people__container .no-of-people::-webkit-input-placeholder {
+  text-align: right;
+  color: #7f9c9f;
+}
+
+main .sec__form .tip__calculator form .no__of__people .no__of__people__container .no-of-people:-ms-input-placeholder {
+  text-align: right;
+  color: #7f9c9f;
+}
+
+main .sec__form .tip__calculator form .no__of__people .no__of__people__container .no-of-people::-ms-input-placeholder {
+  text-align: right;
+  color: #7f9c9f;
+}
+
+main .sec__form .tip__calculator form .no__of__people .no__of__people__container .no-of-people::placeholder {
+  text-align: right;
+  color: #7f9c9f;
+}
+
+main .sec__calculation {
+  background: #00494d;
+  color: #f4fafa;
+  margin: 20px;
+  border-radius: 20px;
+  padding: 20px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 830px) {
+  main .sec__calculation {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+main .sec__calculation .display__screen {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+main .sec__calculation .display__screen .tip__amount__container,
+main .sec__calculation .display__screen .tip__total__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 0px;
+}
+
+main .sec__calculation .display__screen .tip__amount__container .tip__amount,
+main .sec__calculation .display__screen .tip__amount__container .tip__total,
+main .sec__calculation .display__screen .tip__total__container .tip__amount,
+main .sec__calculation .display__screen .tip__total__container .tip__total {
+  font-size: 1.2rem;
+}
+
+main .sec__calculation .display__screen .tip__amount__container .tip__amount .person,
+main .sec__calculation .display__screen .tip__amount__container .tip__total .person,
+main .sec__calculation .display__screen .tip__total__container .tip__amount .person,
+main .sec__calculation .display__screen .tip__total__container .tip__total .person {
+  display: block;
+  font-size: 1rem;
+  color: #7f9c9f;
+}
+
+main .sec__calculation .display__screen .tip__amount__container .tip__amount__screen,
+main .sec__calculation .display__screen .tip__amount__container .tip__total__screen,
+main .sec__calculation .display__screen .tip__total__container .tip__amount__screen,
+main .sec__calculation .display__screen .tip__total__container .tip__total__screen {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #26c0ab;
+}
+
+main .sec__calculation .btn__reset {
+  padding: 6px 10px;
+  width: 100%;
+  background: #26c0ab;
+  color: #00494d;
+  font-weight: 700;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+main .sec__calculation .btn__reset:hover {
+  background: #c5e4e7;
+}
+/*# sourceMappingURL=style.css.map */

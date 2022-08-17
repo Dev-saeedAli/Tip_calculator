@@ -1,0 +1,36 @@
+@import "./responsive";
+@import "./colors";
+// Reset
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// base styling
+.offset{
+    position: absolute;
+    left: -10000px;
+}
+
+input, label{
+    font-size: $Font-Input;
+    font-family: inherit
+}
+.none{
+    display: none;
+}
+
+@mixin flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flexColCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

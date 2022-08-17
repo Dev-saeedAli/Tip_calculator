@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="author" content="Mohammed Said Ali">
+  <meta name="description" content="This is a calculator app made with html, sass and javascript. This is an front ednd mentor challenge">
+  <meta name="keyword" content="Html, css, javascript, sass">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="./Sass/style.css">
+  <!-- end of stylesheet -->
+  <!-- js -->
+  <script src="./JS/app.js" defer></script>
+  <!-- end of js -->
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <!-- Container -->
+  <div class="container">
+    <!-- header -->
+    <header class="header">
+      <h1>SPLI<br>TTER</h1>
+    </header>
+    <!-- end of header -->
+    <!-- main -->
+    <main>
+    <!-- tip calculator -->
+    <section class="sec__form">
+      <div class="tip__calculator">
+        <!-- form -->
+        <form class="Form">
+          <!-- screen input -->
+          <label for="bill__input">Bill</label>
+          <div class="screen">
+            <span class="currency">$</span>
+            <input type="number" id="bill__input" placeholder="0">
+          </div>
+          <!-- screen input -->
+          <!-- select tip -->
+          <div class="select__tip">
+            <h2>Select Tip %</h2>
+            <div class="btn__container">
+            <button type="button" class="btn btn__tip">5%</button>
+            <button type="button" class="btn btn__tip">10%</button>
+            <button type="button" class="btn btn__tip">15%</button>
+            <button type="button" class="btn btn__tip">25%</button>
+            <button type="button" class="btn btn__tip">50%</button>
+            <label class="offset" for="btn__custom__input"></label>
+            <input type="number" placeholder="Custom" 
+            id="btn__custom__input" class="btn btn__custom">
+          </div>
+          </div>
+          <!-- end of select tip -->
+          <!-- Number of people -->
+          <div class="no__of__people">
+            <label for="no-of-people">Number of People <span class="error-message none">Cant be zero</span></label>
+            <div class="no__of__people__container">
+                <span><img src="./images/icon-person.svg" alt="form-input-user-image">
+                </span>
+              <input type="number" placeholder="0"  id="no-of-people" class="no-of-people">
+            </div>
+          </div>
+          <button class="btn offset" type="submit">Click</button>
+          <!-- end of Number of people -->
+        </form>
+        <!-- end of form -->
+      </div>
+    </section>
+    <!-- end of tip calculator -->
+    <!-- display screen -->
+    <section class="sec__calculation">
+      <h3 class="offset">Tip update screen</h3>
+      <div class="display__screen">
+        <!-- tip Amount screen -->
+        <div class="tip__amount__container">
+            <span class="tip__amount">Tip Amount<span class="person">/ person</span></span>          
+            <span class="tip__amount__screen">$0.00</span>
+        </div>
+        <!-- end of tip Amount screen -->
+        <!-- tip total screen -->
+        <div class="tip__total__container">
+          <span class="tip__total">Total <span class="person">/ person</span></span>          
+          <span class="tip__total__screen">$0.00</span>
+        </div>
+        <!-- end of tip total screen -->
+      </div>
+      <button class="btn btn__reset" aria-label="this is the reset button which will reset all of the provided values on the form.">RESET</button>
+    </section>
+    <!-- end of display screen -->
+  </main>
+  <!-- end of main -->
+  </div>
+  <!-- end of Container -->
+</body>
+</html>
