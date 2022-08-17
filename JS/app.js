@@ -18,16 +18,24 @@ tipBtn.forEach(btn => {
         customInput.value = ""
         tipPercent = e.target.textContent.slice(0, - 1)
     })
-})
+});
 
-customInput.addEventListener("click", ()=>{
+customInput.addEventListener("click", (e)=>{
     tipBtn.forEach(btn => btn.classList.remove("active"))
     customInput.classList.remove("active")
-})
+});
+
+customInput.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+       if(customInput.value !==  ""){
+        customInput.classList.remove("active")
+       }
+    }
+});
 
 resetBtn.addEventListener("click", ()=>{
     resetForm()
-})
+});
 
 // submitting form
 function submitForm(e) {
