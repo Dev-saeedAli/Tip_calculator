@@ -15,6 +15,7 @@ tipBtn.forEach(btn => {
         tipBtn.forEach(btn => btn.classList.remove('active'));
         customInput.classList.remove("active")
         btn.classList.add("active");
+        customInput.value = ""
         tipPercent = e.target.textContent.slice(0, - 1)
     })
 })
