@@ -12,19 +12,25 @@ form.addEventListener("submit", submitForm)
 // looping through all btns and removing and adding active class.
 tipBtn.forEach(btn => {
     btn.addEventListener("click", (e)=>{
-        tipBtn.forEach(btn => btn.classList.remove('active'));
-        customInput.classList.remove("active")
-        btn.classList.add("active");
-        customInput.value = ""
-        tipPercent = e.target.textContent.slice(0, - 1)
+            tipBtn.forEach(btn => btn.classList.remove('active'));
+            customInput.classList.remove("active")
+            btn.classList.add("active");
+            customInput.value = ""
+            tipPercent = e.target.textContent.slice(0, - 1)
     })
 });
 
-customInput.addEventListener("click", (e)=>{
-    tipBtn.forEach(btn => btn.classList.remove("active"))
-    customInput.classList.remove("active")
-});
+// looping through all the btn and if selected removing the active class from customInput and rerendering the form if the enterkey is pressed.
+tipBtn.forEach(btn => {
+    btn.addEventListener("keyup", function(event){
+        if (event.keyCode === 13) {
+            submitForm(event)
+            customInput.classList.remove("active")
+         }
+    })
+})
 
+// when the enter key is pressed from the custom input the active class is removed.
 customInput.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
        if(customInput.value !==  ""){
@@ -32,6 +38,7 @@ customInput.addEventListener("keyup", function(event) {
        }
     }
 });
+
 
 resetBtn.addEventListener("click", ()=>{
     resetForm()
