@@ -17,14 +17,15 @@ tipBtn.forEach(btn => {
             btn.classList.add("active");
             customInput.value = ""
             tipPercent = e.target.textContent.slice(0, - 1)
-    })
-});
-
-// looping through all the btn and if selected removing the active class from customInput and rerendering the form if the enterkey is pressed.
-tipBtn.forEach(btn => {
-    btn.addEventListener("keyup", function(event){
-        if (event.keyCode === 13) {
-            submitForm(event)
+        })
+    });
+    
+    // looping through all the btn and if selected removing the active class from customInput and rerendering the form if the enterkey is pressed.
+    tipBtn.forEach(btn => {
+        btn.addEventListener("keyup", function(event){
+            if (event.keyCode === 13) {
+                btn.classList.add("active");
+                submitForm(event)
             customInput.classList.remove("active")
          }
     })
@@ -36,9 +37,8 @@ customInput.addEventListener("keyup", function(event) {
        if(customInput.value !==  ""){
         customInput.classList.remove("active")
         tipBtn.forEach(btn => {
-            btn.addEventListener("click", ()=>{
+       
                 btn.classList.remove("active")
-            })
         })
        }
     }
