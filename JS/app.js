@@ -35,6 +35,11 @@ customInput.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
        if(customInput.value !==  ""){
         customInput.classList.remove("active")
+        tipBtn.forEach(btn => {
+            btn.addEventListener("click", ()=>{
+                btn.classList.remove("active")
+            })
+        })
        }
     }
 });
